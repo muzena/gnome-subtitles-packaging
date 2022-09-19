@@ -1,0 +1,6 @@
+gnome-subtitles (0.9.1-1) unstable; urgency=low
+
+  SubLib is no longer a separated project from gnome-subtitles, so that lib
+  will be removed from archive soon.
+
+ -- Tiago Bortoletto Vaz <tiago@debian-ba.org>  Mon, 20 Jul 2009 16:49:24 -0300

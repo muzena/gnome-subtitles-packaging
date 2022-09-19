@@ -1,0 +1,44 @@
+Source: gnome-subtitles
+Section: gnome
+Priority: optional
+Maintainer: Debian CLI Applications Team <pkg-cli-apps-team@lists.alioth.debian.org>
+Uploaders: Tiago Bortoletto Vaz <tiago@debian.org>, Mirco Bauer <meebey@debian.org>
+Build-Depends: debhelper-compat (= 13),
+ mono-devel (>= 4.0),
+ libgtk-3-dev (>= 3.12),
+ libgstreamer1.0-dev,
+ libgstreamer-plugins-base1.0-dev,
+ libgstreamer-plugins-bad1.0-dev (>= 1.18),
+ docbook-xml <!nocheck>,
+ itstool,
+ intltool (>= 0.50),
+ yelp-tools,
+ meson (>= 0.53),
+ libges-1.0-dev (>= 1.18)
+Standards-Version: 4.5.1
+Homepage: http://gnomesubtitles.org
+Vcs-Git: https://salsa.debian.org/dotnet-team/gnome-subtitles.git
+Vcs-Browser: https://salsa.debian.org/dotnet-team/gnome-subtitles/
+
+Package: gnome-subtitles
+Architecture: any
+Depends: ${cli:Depends}, ${misc:Depends}, ${shlibs:Depends},
+ mono-runtime (>= 4.0),
+ libmono-i18n4.0-all (>= 4.0),
+ libmono-posix4.0-cil (>= 4.0),
+ libgtk-3-0 (>= 3.12),
+ libgstreamer1.0-0,
+ gstreamer1.0-gtk3,
+ gstreamer1.0-plugins-good,
+ gstreamer1.0-libav,
+ libgtkspell3-3-0 (>= 3.0),
+ enchant-2,
+Recommends: gstreamer0.10-ffmpeg
+Description: Subtitle editor for the GNOME Desktop environment
+ Gnome Subtitles is a subtitle editor for the GNOME desktop.
+ .
+ It supports the most common text-based subtitle formats, video
+ previewing, timings synchronization and subtitle translation.
+ .
+ Some supported subtitle formats are: Advanced Sub Station Alpha, FAB
+ Subtitler, MicroDVD, MPlayer 1/2, MPSub, SubRip, SubViewer 1/2.

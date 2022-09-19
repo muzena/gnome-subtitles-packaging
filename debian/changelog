@@ -1,0 +1,264 @@
+gnome-subtitles (1.8-1) unstable; urgency=medium
+
+  * New upstream release
+  * Depends on a fork of gtk-sharp, now built and shipped within the package
+
+ -- Tiago Bortoletto Vaz <tiago@debian.org>  Tue, 23 Aug 2022 19:03:21 -0400
+
+gnome-subtitles (1.6-2.1) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * debian/control:
+    + Migrate build-dependency to enchant-2.
+    + Update debhelper minimal version to 9+ for consistency
+      with debian/compat.
+    + Replace obsolete build-dependency gnome-doc-utils with
+      yelp-tools. (Closes: #956725)
+  * debian/patches: Add patch to migrate the package to use
+    enchant-2. (Closes: #948437)
+
+ -- Boyuan Yang <byang@debian.org>  Sat, 18 Apr 2020 04:22:24 +0000
+
+gnome-subtitles (1.6-2) unstable; urgency=medium
+
+  * Minor fixes on debian/copyright and debian/control files.
+
+ -- Tiago Bortoletto Vaz <tiago@debian.org>  Sat, 14 Mar 2020 16:08:38 -0400
+
+gnome-subtitles (1.6-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Tiago Bortoletto Vaz <tiago@debian.org>  Sun, 08 Mar 2020 10:53:03 -0400
+
+gnome-subtitles (1.4.1-1) unstable; urgency=medium
+
+  * New upstream release. This release fixes a bug which resulted in a system
+    freeze after the application consumed available memory.
+
+ -- Tiago Bortoletto Vaz <tiago@debian.org>  Sun, 14 Oct 2018 10:16:29 -0400
+
+gnome-subtitles (1.4-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Tiago Bortoletto Vaz <tiago@debian.org>  Fri, 27 Jul 2018 02:32:22 -0400
+
+gnome-subtitles (1.2-3) unstable; urgency=low
+
+  * Depends on libmono-i18n4.0-all instead of libmono-i18n4.0-cil to have all
+    encodings available on system. Thanks to phileom and mc. (Closes: #660336)
+  * Update package long description as the upstream asked for :)
+  * Fix typo in package short description.
+
+ -- Tiago Bortoletto Vaz <tiago@debian.org>  Sun, 11 Mar 2012 23:07:03 -0400
+
+gnome-subtitles (1.2-2) unstable; urgency=low
+
+  [ Chow Loong Jin ]
+  * Team upload.
+  * [2054da2] No-change Standards-Version bump (3.9.1 -> 3.9.2)
+  * [89ea36e] Bump compat level and use override_* dh(1) syntax
+  * [09e6261] Make dh_makeshlibs exclude /usr/lib/gnome-subtitles
+
+  [ Jo Shields ]
+  * [3cb75c6] Update debian/rules for DH8-compatible "--with cli"
+  * [9d500fd] Manual dependency on libmono-i18n4.0-cil not 2.0.
+
+ -- Iain Lane <laney@debian.org>  Wed, 18 Jan 2012 14:24:29 +0800
+
+gnome-subtitles (1.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Tiago Bortoletto Vaz <tiago@debian.org>  Tue, 23 Aug 2011 22:24:17 -0300
+
+gnome-subtitles (1.1-2.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Don't ship .la files (Closes: #621259).
+
+ -- Luk Claes <luk@debian.org>  Mon, 04 Jul 2011 07:09:54 +0200
+
+gnome-subtitles (1.1-2) unstable; urgency=low
+
+  [ Julian Taylor ]
+  * [3bf8a9a] initial upstream branch
+  * [e562729] Imported Upstream version 1.1
+  * [8ca04d6] drop unnecessary dependency on libmono-dev
+  * [7d994b7] update Vcs-* fields to point to git
+
+ -- Jo Shields <directhex@apebox.org>  Thu, 16 Jun 2011 20:32:01 +0100
+
+gnome-subtitles (1.1-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control:
+    + Remove quilt dependence
+    + Update Policy version - AFAICS, no changes needed on package
+
+ -- Tiago Bortoletto Vaz <tiago@debian.org>  Sat, 06 Nov 2010 10:22:02 -0200
+
+gnome-subtitles (1.0-2) unstable; urgency=low
+
+  * debian/control:
+    + Add depends on gstreamer0.10-plugins-base; app fails to start when this
+      is not present (Closes: #586986)
+    + Add recommends on gstreamer0.10-ffmpeg — cannot import or preview videos
+      without any codecs present
+    + Add quilt patchsys
+  * debian/patches/insecure_library_loading:
+    + Add patch taken from upstream git to fix insecure library loading bug. (Closes: #598289)
+      References: CVE-2010-3357
+      Thanks to dai for forwarding the patch, and for Pedro Castro for developing it.
+
+ -- Iain Lane <laney@ubuntu.com>  Wed, 13 Oct 2010 21:26:29 +0100
+
+gnome-subtitles (1.0-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Tiago Bortoletto Vaz <tiago@debian.org>  Sun, 21 Feb 2010 12:54:14 -0300
+
+gnome-subtitles (0.9.1-2) unstable; urgency=low
+
+  [ Tiago Bortoletto Vaz ]
+  * debian/control:
+    + Add my new email to Uploaders field;
+
+  [ Jo Shields ]
+  * debian/control:
+    + No-change bump to Standards 3.8.3
+    + Use GNOME# and GTK# -dev packages
+  * debian/control,
+    debian/rules:
+    + Use mono-csc from mono-devel 2.4.3 (Closes: #562277)
+
+ -- Tiago Bortoletto Vaz <tiago@debian.org>  Wed, 28 Oct 2009 10:28:59 -0200
+
+gnome-subtitles (0.9.1-1) unstable; urgency=low
+
+  [ Tiago Bortoletto Vaz ]
+  * New upstream release
+  * Update Brazilian Portuguese translation. Thanks to Marco de Freitas.
+    (Closes: #524072)
+  * Add NEWS file explaining SubLib is back to gnome-subtitles.
+  * debian/control:
+    + Update Policy version to 3.8.2;
+    + Add Dm-Upload-Allowed field;
+    + Add intltool as dependency;
+    + Remove sublib as dependency;
+  * Remove old debian patches
+
+ -- Tiago Bortoletto Vaz <tiago@debian-ba.org>  Mon, 20 Jul 2009 18:56:49 -0300
+
+gnome-subtitles (0.8-3) unstable; urgency=low
+
+  * debian/control: libgnome2.0-cil -> libgnome2.24-cil for GNOME# transition.
+
+ -- Iain Lane <laney@ubuntu.com>  Sat, 18 Apr 2009 15:43:05 +0100
+
+gnome-subtitles (0.8-2) unstable; urgency=low
+
+  * Upload to unstable.
+  * debian/control:
+    + Added libenchant-dev and libgtkspell-dev to build-deps as dh_clideps
+      needs the shlibs for those libraries.
+
+ -- Mirco Bauer <meebey@debian.org>  Sun, 08 Mar 2009 13:38:45 +0100
+
+gnome-subtitles (0.8-1) experimental; urgency=low
+
+  [ Jo Shields ]
+  * debian/control:
+    + Fix missing comma
+  * debian/control,
+    debian/rules:
+    + Change compiler and build-deps for Mono 2.0 transition
+
+  [ Tiago Bortoletto Vaz ]
+  * New upstream release (Closes: #480907)
+  * debian/control:
+    + now getting real dependencies automatically via dh_clideps;
+      (Closes: #483361)
+    + added cli-common-dev as build-dependency;
+    + added libmono-i18n2.0-cil to dependencies in order to avoid problems
+      opening some Windows(tm) enconded files;
+    + added Homepage, Vcs-Svn and Vcs-Browser flags;
+    + removed some uneeded build-dependencies;
+    + Standards version updated to 3.8.0;
+    + updating mono-2.0-devel package name in build-depends;
+  * debian/rules
+    + using cli helpers in order to fix perms and getting dependencies
+      automagically;
+    + Removed useless dpatch stuff;
+  * debian/patches/01_fix_sublib_linking.dpatch:
+    + removing MONO_PATH hack and using sublib from app dir;
+
+  [ Mirco Bauer ]
+  * debian/control:
+    + Updated debhelper build-dependency to >= 7.
+    + Added myself to Uploaders.
+  * debian/rules:
+    + Include /usr/share/cli-common/cli.make
+    + Migrated to debhelper v7 minimalistic style.
+  * debian/docs:
+    + Converted some debian/rules calls to debhelper files.
+  * debian/compat:
+    + Bumped to 7
+  * debian/watch:
+    + Added
+
+ -- Tiago Bortoletto Vaz <tiago@debian-ba.org>  Wed, 10 Dec 2008 09:02:42 -0300
+
+gnome-subtitles (0.7.2-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #458448)
+  * Dpatch removed since upstream fixed the issues.
+
+ -- Tiago Bortoletto Vaz <tiago@debian-ba.org>  Sat, 15 Mar 2008 11:03:53 -0300
+
+gnome-subtitles (0.7-2.1) unstable; urgency=low
+
+  * Non-maintainer upload to fix FTFBS bug.
+  * Add missing build-depends on libmono2.0-cil (Closes: #458665).
+
+ -- Ana Beatriz Guerrero Lopez <ana@debian.org>  Sun, 13 Jan 2008 16:59:36 +0100
+
+gnome-subtitles (0.7-2) unstable; urgency=low
+
+  * Set MONO_SHARED_DIR=$(CURDIR) to avoid writing in ~/.wapi. Thanks to Kurt
+    Roeckx.  (Closes: #454973)
+  * Add configure --disable-scrollkeeper flag. It's needed to avoid writing in
+    /var/log/scrollkeeper.log during the build.
+  * Remove mplayer as Suggests since 0.7 uses gstreamer instead.
+
+ -- Tiago Bortoletto Vaz <tiago@debian-ba.org>  Wed, 12 Dec 2007 09:55:43 -0300
+
+gnome-subtitles (0.7-1) unstable; urgency=low
+
+  * New upstream release;
+  * Add libxml-parser-perl to Build-Depends-Indep. Thanks to Lucas Nussbaum.
+    (Closes: #445799);
+  * Fixes manpage issue with dpatch
+
+ -- Tiago Bortoletto Vaz <tiago@debian-ba.org>  Mon, 03 Dec 2007 20:52:52 -0300
+
+gnome-subtitles (0.6-3) unstable; urgency=low
+
+  * Add gnome-doc-utils to Build-Depends-Indep. Thanks to Michael Ablassmeier.
+    (Closes: #436363)
+
+ -- Tiago Bortoletto Vaz <tiago@debian-ba.org>  Wed, 26 Sep 2007 19:00:36 -0300
+
+gnome-subtitles (0.6-2) unstable; urgency=low
+
+  * Depends on gnome-sharp2. Thanks to Mathias Brodala. (Closes: #435269)
+
+ -- Tiago Bortoletto Vaz <tiago@debian-ba.org>  Sat, 04 Aug 2007 03:09:02 -0300
+
+gnome-subtitles (0.6-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #386447)
+
+ -- Tiago Bortoletto Vaz <tiago@debian-ba.org>  Sun, 08 Jul 2007 23:12:37 -0300
